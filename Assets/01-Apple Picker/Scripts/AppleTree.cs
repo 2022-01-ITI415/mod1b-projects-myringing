@@ -9,6 +9,9 @@ public class AppleTree : MonoBehaviour
     public float leftAndRightEdge = 0.1f;
     public float chanceToChangeDirections = 0.1f;
     public float secondsBetweenAppleDrops = 1f;
+    public GameObject boomPrefab;
+    public float chanceToDropBooms = 0.1f;
+    private GameObject drop;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,15 +38,33 @@ public class AppleTree : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (secondsBetweenAppleDrops > 0.2f)
+        {
+            secondsBetweenAppleDrops -= 0.1f * Time.deltaTime;
+        }
         if (Random.value < chanceToChangeDirections)
         {
             speed *= -1;
+        }
+
+        if (Random.value < chanceToDropBooms)
+        {
+            drop = boomPrefab;
+        }
+        else
+        {
+            drop = applePrefab;
         }
     }
 
     void DropApple()
     {
-        GameObject apple = Instantiate(applePrefab) as GameObject;
-        apple.transform.position = transform.position;
+        GameObject GO = Instantiate(drop) as GameObject;
+        GO.transform.position = transform.position;
+    }
+
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
     }
 }

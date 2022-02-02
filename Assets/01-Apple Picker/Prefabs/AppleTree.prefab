@@ -50,6 +50,8 @@ MonoBehaviour:
   leftAndRightEdge: 20
   chanceToChangeDirections: 0.02
   secondsBetweenAppleDrops: 1
+  boomPrefab: {fileID: 858469996105051966, guid: 26f30d8ba60927d43b5cd695e0473c8a, type: 3}
+  chanceToDropBooms: 0.2
 --- !u!1 &5567739784538176822
 GameObject:
   m_ObjectHideFlags: 0
