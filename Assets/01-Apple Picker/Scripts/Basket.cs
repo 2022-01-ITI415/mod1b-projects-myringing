@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Basket : MonoBehaviour
 {
     public Text scoreGT;
+    public Text scoreC;
+    public GameObject scoreCo;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,7 @@ public class Basket : MonoBehaviour
 
         scoreGT.text = score.ToString();
 
-        if(score > HighScore.score)
+        if (score > HighScore.score)
         {
             HighScore.score = score;
         }
