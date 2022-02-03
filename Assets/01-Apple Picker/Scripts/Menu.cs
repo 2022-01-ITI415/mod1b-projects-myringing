@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
 
-    public void Restart()
+    public void Apple()
     {
         SceneManager.LoadScene("Main-ApplePicker");
     }

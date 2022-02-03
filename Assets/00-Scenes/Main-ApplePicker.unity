@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4806903929797547409, guid: dff27e272a7b350479430f2a512a0857, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Apple
+      objectReference: {fileID: 0}
     - target: {fileID: 4806903929797547411, guid: dff27e272a7b350479430f2a512a0857, type: 3}
       propertyPath: m_Layer
       value: 5
