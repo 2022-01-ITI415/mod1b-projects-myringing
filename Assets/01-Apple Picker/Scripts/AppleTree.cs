@@ -38,10 +38,6 @@ public class AppleTree : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (secondsBetweenAppleDrops > 0.2f)
-        {
-            secondsBetweenAppleDrops -= 0.1f * Time.deltaTime;
-        }
         if (Random.value < chanceToChangeDirections)
         {
             speed *= -1;
