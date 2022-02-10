@@ -855,6 +855,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4545052999782890414, guid: 75d9b3bae733db74983d2455ca0b89e0, type: 3}
+      propertyPath: secondsBetweenAppleDrops
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1372512590244416306, guid: 75d9b3bae733db74983d2455ca0b89e0, type: 3}
       propertyPath: m_RootOrder
       value: 3
