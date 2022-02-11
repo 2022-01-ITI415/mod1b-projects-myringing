@@ -1017,6 +1017,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4806903928224551339, guid: dff27e272a7b350479430f2a512a0857, type: 3}
   m_PrefabInstance: {fileID: 141877966}
   m_PrefabAsset: {fileID: 0}
+--- !u!222 &1665103886
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665103884}
+  m_CullTransparentMesh: 1
 --- !u!1 &1692821683
 GameObject:
   m_ObjectHideFlags: 0
