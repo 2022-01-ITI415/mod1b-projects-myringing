@@ -23,7 +23,7 @@ public class FollowCam : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (poi == null) return;
         Vector3 destination = poi.transform.position;
