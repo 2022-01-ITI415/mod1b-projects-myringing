@@ -15,4 +15,14 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Title()
+    {
+        SceneManager.LoadScene("SceneMain");
+    }
+
+    public void MissionDemolition()
+    {
+        SceneManager.LoadScene("Main-MissionDemolition");
+    }
 }

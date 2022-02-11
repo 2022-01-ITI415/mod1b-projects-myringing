@@ -7,7 +7,8 @@ public enum GameMode
 {
     idle,
     playing,
-    levelEnd
+    levelEnd,
+    end
 }
 public class MissionDemolition : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class MissionDemolition : MonoBehaviour
     public GameObject castle;
     public GameMode mode = GameMode.idle;
     public string showing = "Slingshot";
+
+    public GameObject menu;
 
     // Start is called before the first frame update
     void Start()
@@ -78,7 +81,10 @@ public class MissionDemolition : MonoBehaviour
             mode = GameMode.levelEnd;
 
             SwitchView("Both");
-            Invoke("NextLevel", 2f);
+            if (mode != GameMode.end)
+            {
+                Invoke("NextLevel", 2f);
+            }
         }
     }
 
@@ -87,7 +93,9 @@ public class MissionDemolition : MonoBehaviour
         level++;
         if (level == levelMax)
         {
-            level = 0;
+            mode = GameMode.end;
+            menu.SetActive(true);
+            return;
         }
         StartLevel();
     }

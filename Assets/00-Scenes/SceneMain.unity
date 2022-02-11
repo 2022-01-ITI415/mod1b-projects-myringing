@@ -352,8 +352,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1350991675}
-        m_TargetAssemblyTypeName: LoadNewScene, Assembly-CSharp
-        m_MethodName: LoadScene2
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: MissionDemolition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
