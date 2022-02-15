@@ -645,9 +645,10 @@ GameObject:
   - component: {fileID: 7909930063628210310}
   - component: {fileID: 7909930063628210311}
   - component: {fileID: 975617914974785356}
+  - component: {fileID: 666651163562939849}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -729,6 +730,22 @@ MonoBehaviour:
   speed: 0
   player: {fileID: 0}
   velocity: 0
+  rotSpeed: 0
+  movementX: 0
+  movementY: 0
+--- !u!65 &666651163562939849
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7909930063628210308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1.8}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &7909930063678810193
 GameObject:
   m_ObjectHideFlags: 0

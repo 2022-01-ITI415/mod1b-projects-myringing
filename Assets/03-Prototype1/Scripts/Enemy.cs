@@ -5,13 +5,15 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public GameObject cannonprefab;
+    public float fireRate = 1f;
     public float speed = 10;
+    public float range;
 
     private GameObject player;
     private Vector3 playerPos;
     private float height = 0.4f;
 
-    public float fireRate = 1f;
+    
     private float nextFire;
 
     // Start is called before the first frame update
@@ -33,8 +35,9 @@ public class Enemy : MonoBehaviour
         playerPos = player.transform.position;
         playerPos.y = height;
 
-        if (Vector3.Distance(playerPos, transform.position) < 15f)
+        if (Vector3.Distance(playerPos, transform.position) < range)
         {
+            transform.LookAt(playerPos);
             nextFire = nextFire + Time.fixedDeltaTime;
             if (nextFire > fireRate)
             {
