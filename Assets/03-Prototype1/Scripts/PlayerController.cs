@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         S = this;
         rb = GetComponent<Rigidbody>();
+        
     }
 
     void OnMove(InputValue movementValue)
@@ -34,11 +35,14 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
 
-        rb.AddForce(movement * speed);
-
         //get player's velocity
         Vector3 vel = rb.velocity;
         velocity = Mathf.Max(Mathf.Abs(vel.x), Mathf.Abs(vel.z));
+
+        if (velocity < 10)
+        {
+            rb.AddForce(movement * speed);
+        }
 
         if (movementX != 0 || movementY != 0)
         {

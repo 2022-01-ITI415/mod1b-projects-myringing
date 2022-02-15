@@ -174,7 +174,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c41a2fc7630e56847a47f1774c180821, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -269,7 +269,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c41a2fc7630e56847a47f1774c180821, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -364,7 +364,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c41a2fc7630e56847a47f1774c180821, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -506,10 +506,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camY: 10
-  player: {fileID: 1582136866}
+  player: {fileID: 1748825557}
   mousePos: {x: 0, y: 0, z: 0}
   destination: {x: 0, y: 0, z: 0}
-  easing: 0.05
+  easing: 0.1
 --- !u!114 &792234110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,16 +713,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1582136866 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7909930062924716915, guid: d4d770dd0fe65e14bb406ba6e04ca625, type: 3}
-  m_PrefabInstance: {fileID: 7909930061879502161}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1748825557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7909930063628210308, guid: d4d770dd0fe65e14bb406ba6e04ca625, type: 3}
   m_PrefabInstance: {fileID: 7909930061879502161}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1799408896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7909930063678810193, guid: d4d770dd0fe65e14bb406ba6e04ca625, type: 3}
+  m_PrefabInstance: {fileID: 7909930061879502161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1799408899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799408896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79251b26b92d5d4a80c038442b6c5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  cannonprefab: {fileID: 7157404162809537265, guid: cb9ce3fcda0561b45ab72b75f17ffebe, type: 3}
+  mousePos: {x: 0, y: 0, z: 0}
 --- !u!1 &2088461825
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +789,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c41a2fc7630e56847a47f1774c180821, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -15,6 +15,6 @@ public class WheelRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(30, 0, 0) * Time.deltaTime * PlayerController.S.velocity);
+        transform.Rotate(new Vector3(45, 0, 0) * Time.deltaTime * PlayerController.S.velocity);
     }
 }
