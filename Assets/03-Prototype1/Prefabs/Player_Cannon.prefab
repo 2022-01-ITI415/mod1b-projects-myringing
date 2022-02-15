@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 832909213702993272}
   - component: {fileID: 7674444228245975014}
   - component: {fileID: 259884993535176000}
-  m_Layer: 0
-  m_Name: Cannon
+  m_Layer: 12
+  m_Name: Player_Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0dca1edcdc3a16b44b723404227206fe, type: 2}
+  - {fileID: 2100000, guid: a0892b20f729d4a46beda580b631e4c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,7 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7157404162809537265}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

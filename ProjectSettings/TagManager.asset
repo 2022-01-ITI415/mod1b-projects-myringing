@@ -7,6 +7,9 @@ TagManager:
   - Apple
   - Boom
   - Projectile
+  - Tower
+  - Wall
+  - RedWall
   layers:
   - Default
   - TransparentFX
@@ -20,11 +23,11 @@ TagManager:
   - Apple
   - Basket
   - Background
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerCannon
+  - EnemyCannon
+  - Player
+  - Enemy
+  - Wall
   - 
   - 
   - 

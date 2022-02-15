@@ -8,7 +8,7 @@ public class HeadRotation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GetMouse.S.mousePos3D;
+
     }
 
     // Update is called once per frame
