@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public GameObject player;
     public GameObject frontWheel;
     public GameObject backWheel;
 
@@ -13,6 +12,12 @@ public class EnemyFollow : MonoBehaviour
     public float rotSpeed = 0.05f;
     public float wheelRotSpeed = 5f;
 
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
     // Update is called once per frame
     void FixedUpdate()
     {

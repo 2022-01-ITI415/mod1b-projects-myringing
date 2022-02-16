@@ -8,6 +8,7 @@ public class RotatingWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, 40, 0) * Time.deltaTime);
+        Vector3 rot = new Vector3(0, 30, 0);
+        transform.Rotate(rot * Time.deltaTime);
     }
 }

@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     public GameObject door_1;
     public GameObject door_2;
     public GameObject door_3;
-    public GameObject door_4;
 
     private int score = 0;
     private int count = 0;
@@ -54,6 +53,13 @@ public class Player : MonoBehaviour
         {
             door_2.SetActive(false);
             GameObject.Find("Level").GetComponent<TextMeshProUGUI>().text = "Level: 3/4";
+            score = 0;
+            Collected();
+        }
+        if (count == 12)
+        {
+            door_3.SetActive(false);
+            GameObject.Find("Level").GetComponent<TextMeshProUGUI>().text = "Boss";
             score = 0;
             Collected();
         }
