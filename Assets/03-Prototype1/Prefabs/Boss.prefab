@@ -270,6 +270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropPrefab: {fileID: 5128233041173571516, guid: 34ef784e87a064942a4d87be7806ff59, type: 3}
   health: 60
+  LoseT: {fileID: 0}
+  menu: {fileID: 0}
 --- !u!1 &1230567473416534091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,8 +1599,9 @@ GameObject:
   - component: {fileID: 4384427161152629229}
   - component: {fileID: 1838139301679037563}
   - component: {fileID: 4938737964650101182}
+  - component: {fileID: 6213684772398072244}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Workshop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1680,6 +1683,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6213684772398072244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2900450816987717643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964e1fc523d420b45ad8b86156e537f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4688973497972271438, guid: 3492b77ec9235e24d86942c74291bb89, type: 3}
+  produceRate: 10
+  range: 20
+  posX: 0
+  posZ: 0
 --- !u!1 &3158059304574550548
 GameObject:
   m_ObjectHideFlags: 0
