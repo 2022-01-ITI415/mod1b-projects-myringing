@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6e8be7225e8074dbc7eab1e8951a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropPrefab: {fileID: 4871979809904732250, guid: ad6e54620441dc540b69b81e731ffa8c, type: 3}
   health: 5
 --- !u!1 &2830947601404457841
 GameObject:

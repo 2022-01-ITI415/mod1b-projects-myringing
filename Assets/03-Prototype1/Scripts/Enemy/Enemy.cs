@@ -45,6 +45,5 @@ public class Enemy : MonoBehaviour
                 nextFire = 0;
             }
         }
-
     }
 }

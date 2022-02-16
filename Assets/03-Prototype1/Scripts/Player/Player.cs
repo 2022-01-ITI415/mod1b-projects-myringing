@@ -50,6 +50,13 @@ public class Player : MonoBehaviour
             score = 0;
             Collected();
         }
+        if (count == 8)
+        {
+            door_2.SetActive(false);
+            GameObject.Find("Level").GetComponent<TextMeshProUGUI>().text = "Level: 3/4";
+            score = 0;
+            Collected();
+        }
     }
 
     // Update is called once per frame

@@ -14,10 +14,15 @@ public class PlayerCannon : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        else if (other.transform.tag == "Tower")
+        else if (other.transform.tag == "Tower" || other.transform.tag == "Enemy")
         {
             Destroy(this.gameObject);
             other.gameObject.GetComponent<Health>().Striked();
+        }
+        else if (other.transform.tag == "Cannon")
+        {
+            Destroy(this.gameObject);
+            Destroy(other.gameObject);
         }
     }
 
