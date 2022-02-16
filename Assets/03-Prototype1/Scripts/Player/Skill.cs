@@ -25,12 +25,22 @@ public class Skill : MonoBehaviour
         GetComponent<Player>().empNum -= 1;
     }
 
+    private void CheatCode()
+    {
+        GetComponent<Health>().health += 50;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (keyboard.spaceKey.wasPressedThisFrame && GetComponent<Player>().empNum > 0)
         {
             Use();
+        }
+
+        else if (keyboard.jKey.wasPressedThisFrame)
+        {
+            CheatCode();
         }
     }
 }
