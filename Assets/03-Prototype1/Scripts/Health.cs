@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
             health = 1;
             this.gameObject.SetActive(false);
         }
-        else if (transform.tag == "Tower" && health <= 0)
+        else if ((transform.tag == "Tower" || transform.tag == "Boss") && health <= 0)
         {
             Vector3 pos = transform.position;
             pos.y = 0.5f;

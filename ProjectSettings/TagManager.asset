@@ -13,6 +13,8 @@ TagManager:
   - PickUp
   - Enemy
   - Cannon
+  - Treasure
+  - Boss
   layers:
   - Default
   - TransparentFX

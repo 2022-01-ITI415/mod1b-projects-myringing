@@ -6,12 +6,14 @@ using TMPro;
 public class Player : MonoBehaviour
 {
     public TextMeshProUGUI scoreGUI;
+    public TextMeshProUGUI hp;
     public GameObject door_1;
     public GameObject door_2;
     public GameObject door_3;
 
     private int score = 0;
     private int count = 0;
+    private bool win = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,12 @@ public class Player : MonoBehaviour
             score += 1;
             count += 1;
             Collected();
+            other.gameObject.SetActive(false);
+        }
+        if (other.gameObject.CompareTag("Treasure"))
+        {
+            this.GetComponent<Health>().health += 1;
+            win = true;
             other.gameObject.SetActive(false);
         }
     }
@@ -63,11 +71,17 @@ public class Player : MonoBehaviour
             score = 0;
             Collected();
         }
+        if (count == 16 && win == true)
+        {
+
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        hp.text = "HP: " + GameObject.Find("Player").GetComponent<Health>().health.ToString();
+
         if (score == 4)
         {
             NextLv();
