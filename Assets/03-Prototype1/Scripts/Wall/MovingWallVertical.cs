@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovingWallVertical : MonoBehaviour
 {
+    public float speed = 1;
     private int movingSwitch;
 
     // Update is called once per frame
@@ -21,12 +22,12 @@ public class MovingWallVertical : MonoBehaviour
 
     void MoveUp()
     {
-        transform.position += (new Vector3(0, 0, 1) * Time.deltaTime);
+        transform.position += (new Vector3(0, 0, speed) * Time.deltaTime);
     }
 
     void MoveDown()
     {
-        transform.position += (new Vector3(0, 0, -1) * Time.deltaTime);
+        transform.position += (new Vector3(0, 0, -speed) * Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider other)
