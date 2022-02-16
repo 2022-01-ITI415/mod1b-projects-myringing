@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
-public class Slingshot : MonoBehaviour
+public class Slingshot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     static public Slingshot S;
     public GameObject prefabProjectile;
@@ -12,6 +14,7 @@ public class Slingshot : MonoBehaviour
     public Vector3 launchPos;
     public GameObject projectile;
     public bool aimingMode;
+    public Mouse mouse = Mouse.current;
 
     void Awake()
     {
@@ -21,20 +24,21 @@ public class Slingshot : MonoBehaviour
         launchPoint.SetActive(false);
         launchPos = launchPointTrans.position;
     }
-    void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
         print("Slingshot:OnMouseEnter()");
         launchPoint.SetActive(true);
     }
 
-    void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
         print("Slingshot:OnMouseExit()");
         launchPoint.SetActive(false);
     }
 
-    private void OnMouseDown()
+    private void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
         aimingMode = true;
         projectile = Instantiate(prefabProjectile) as GameObject;
         projectile.transform.position = launchPos;
@@ -50,9 +54,9 @@ public class Slingshot : MonoBehaviour
     void Update()
     {
         if (!aimingMode) return;
-        Vector3 mousePos2D = Input.mousePosition;
-        mousePos2D.z = -Camera.main.transform.position.z;
+        Vector2 mousePos2D = mouse.position.ReadValue();
         Vector3 mousePose3D = Camera.main.ScreenToWorldPoint(mousePos2D);
+        mousePose3D.z = -Camera.main.transform.position.z;
         Vector3 mouseDelta = mousePose3D - launchPos;
         float maxMagnitude = this.GetComponent<SphereCollider>().radius;
         if (mouseDelta.magnitude > maxMagnitude)

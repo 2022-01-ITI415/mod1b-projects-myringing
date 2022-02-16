@@ -25,4 +25,8 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Main-MissionDemolition");
     }
+    public void BattleCity()
+    {
+        SceneManager.LoadScene("Main-Prototype 1");
+    }
 }

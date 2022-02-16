@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class Basket : MonoBehaviour
 {
     public Text scoreGT;
     public Text scoreC;
     public GameObject scoreCo;
+    public Mouse mouse = Mouse.current;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,7 @@ public class Basket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePos2D = Input.mousePosition;
-        mousePos2D.z = -Camera.main.transform.position.z;
+        Vector2 mousePos2D = mouse.position.ReadValue();
         Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
         Vector3 pos = this.transform.position;
         pos.x = mousePos3D.x;
