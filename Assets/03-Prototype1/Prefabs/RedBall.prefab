@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4919848385506250951}
   m_Layer: 13
   m_Name: RedBall
-  m_TagString: Cannon
+  m_TagString: EnemyCan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

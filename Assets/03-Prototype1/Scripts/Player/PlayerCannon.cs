@@ -19,7 +19,7 @@ public class PlayerCannon : MonoBehaviour
             Destroy(this.gameObject);
             other.gameObject.GetComponent<Health>().Striked();
         }
-        else if (other.transform.tag == "Cannon")
+        else if (other.transform.tag == "EnemyCan")
         {
             Destroy(this.gameObject);
             Destroy(other.gameObject);

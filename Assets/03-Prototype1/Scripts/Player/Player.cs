@@ -7,9 +7,16 @@ public class Player : MonoBehaviour
 {
     public TextMeshProUGUI scoreGUI;
     public TextMeshProUGUI hp;
+    public TextMeshProUGUI emp;
+
+    public int empNum = 3;
+
+    public GameObject winT;
+    public GameObject menu;
     public GameObject door_1;
     public GameObject door_2;
     public GameObject door_3;
+
 
     private int score = 0;
     private int count = 0;
@@ -37,7 +44,7 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Treasure"))
         {
-            this.GetComponent<Health>().health += 1;
+            this.GetComponent<Health>().health += 10;
             win = true;
             other.gameObject.SetActive(false);
         }
@@ -55,6 +62,7 @@ public class Player : MonoBehaviour
             door_1.SetActive(false);
             GameObject.Find("Level").GetComponent<TextMeshProUGUI>().text = "Level: 2/4";
             score = 0;
+            empNum += 1;
             Collected();
         }
         if (count == 8)
@@ -62,6 +70,7 @@ public class Player : MonoBehaviour
             door_2.SetActive(false);
             GameObject.Find("Level").GetComponent<TextMeshProUGUI>().text = "Level: 3/4";
             score = 0;
+            empNum += 1;
             Collected();
         }
         if (count == 12)
@@ -69,18 +78,24 @@ public class Player : MonoBehaviour
             door_3.SetActive(false);
             GameObject.Find("Level").GetComponent<TextMeshProUGUI>().text = "Boss";
             score = 0;
+            empNum += 1;
             Collected();
         }
         if (count == 16 && win == true)
         {
-
+            menu.SetActive(true);
+            winT.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
+
+
 
     // Update is called once per frame
     void Update()
     {
         hp.text = "HP: " + GameObject.Find("Player").GetComponent<Health>().health.ToString();
+        emp.text = "EMP: " + empNum.ToString();
 
         if (score == 4)
         {

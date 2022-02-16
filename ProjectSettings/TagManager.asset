@@ -15,6 +15,7 @@ TagManager:
   - Cannon
   - Treasure
   - Boss
+  - EnemyCan
   layers:
   - Default
   - TransparentFX

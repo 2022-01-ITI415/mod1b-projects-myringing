@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.EventSystems;
 
-public class Slingshot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class Slingshot : MonoBehaviour
 {
     static public Slingshot S;
     public GameObject prefabProjectile;
@@ -14,7 +12,6 @@ public class Slingshot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public Vector3 launchPos;
     public GameObject projectile;
     public bool aimingMode;
-    public Mouse mouse = Mouse.current;
 
     void Awake()
     {
@@ -24,21 +21,20 @@ public class Slingshot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         launchPoint.SetActive(false);
         launchPos = launchPointTrans.position;
     }
-    public void OnPointerEnter(PointerEventData eventData)
+    public void OnMouseEnter()
     {
         print("Slingshot:OnMouseEnter()");
         launchPoint.SetActive(true);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void OnMouseExit()
     {
         print("Slingshot:OnMouseExit()");
         launchPoint.SetActive(false);
     }
 
-    private void OnPointerDown(PointerEventData eventData)
+    private void OnMouseDown()
     {
-        Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
         aimingMode = true;
         projectile = Instantiate(prefabProjectile) as GameObject;
         projectile.transform.position = launchPos;
@@ -54,9 +50,9 @@ public class Slingshot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     void Update()
     {
         if (!aimingMode) return;
-        Vector2 mousePos2D = mouse.position.ReadValue();
+        Vector3 mousePos2D = Input.mousePosition;
+        mousePos2D.z = -Camera.main.transform.position.z;
         Vector3 mousePose3D = Camera.main.ScreenToWorldPoint(mousePos2D);
-        mousePose3D.z = -Camera.main.transform.position.z;
         Vector3 mouseDelta = mousePose3D - launchPos;
         float maxMagnitude = this.GetComponent<SphereCollider>().radius;
         if (mouseDelta.magnitude > maxMagnitude)

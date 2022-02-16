@@ -7,7 +7,15 @@ public class Health : MonoBehaviour
     public static Health S;
     public GameObject dropPrefab;
     public int health;
+
+    public GameObject LoseT;
+    public GameObject menu;
+
     // Start is called before the first frame update
+    private void Start()
+    {
+
+    }
 
     public void Striked()
     {
@@ -19,9 +27,10 @@ public class Health : MonoBehaviour
     {
         if (transform.tag == "Player" && health <= 0)
         {
-            transform.tag = "Untagged";
-            health = 1;
+            health = 0;
             this.gameObject.SetActive(false);
+            LoseT.SetActive(true);
+            menu.SetActive(true);
         }
         else if ((transform.tag == "Tower" || transform.tag == "Boss") && health <= 0)
         {

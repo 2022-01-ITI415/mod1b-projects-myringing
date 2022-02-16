@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     public float rotSpeed;
 
     private Rigidbody rb;
-    public float movementX;
-    public float movementY;
+    private float movementX;
+    private float movementY;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
         movementX = movementVector.x;
         movementY = movementVector.y;
     }
+
+
 
     void FixedUpdate()
     {
