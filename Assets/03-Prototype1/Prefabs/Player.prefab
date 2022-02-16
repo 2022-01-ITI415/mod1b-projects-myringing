@@ -685,7 +685,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &7909930063628210311
 MonoBehaviour:
@@ -733,8 +733,6 @@ MonoBehaviour:
   player: {fileID: 0}
   velocity: 0
   rotSpeed: 0
-  movementX: 0
-  movementY: 0
 --- !u!65 &666651163562939849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -779,6 +777,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropPrefab: {fileID: 0}
   health: 5
+  LoseT: {fileID: 0}
+  menu: {fileID: 0}
 --- !u!1 &7909930063678810193
 GameObject:
   m_ObjectHideFlags: 0

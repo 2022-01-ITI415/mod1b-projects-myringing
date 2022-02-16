@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 424926464157673129}
   - component: {fileID: -6083559101382841339}
   - component: {fileID: 447575328119851608}
+  - component: {fileID: -2968888275838901305}
   m_Layer: 0
   m_Name: Treasure
   m_TagString: Treasure
@@ -560,6 +561,18 @@ MonoBehaviour:
   x: 0
   y: 30
   z: 0
+--- !u!122 &-2968888275838901305
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5128233041173571516}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294959360
+  m_Size: 1
 --- !u!1 &5438411697635590509
 GameObject:
   m_ObjectHideFlags: 0
