@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 122423462018423515}
   - component: {fileID: -6216712651169827998}
   - component: {fileID: -7787959923187478638}
+  - component: {fileID: -8692374107890295480}
   m_Layer: 15
   m_Name: Tower2
   m_TagString: Tower
@@ -320,6 +321,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropPrefab: {fileID: 4871979809904732250, guid: ad6e54620441dc540b69b81e731ffa8c, type: 3}
   health: 5
+  LoseT: {fileID: 0}
+  menu: {fileID: 0}
+--- !u!114 &-8692374107890295480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584007746416502090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c1b5c59075c384d96ca59e1e425deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 3012341752944046686}
 --- !u!1 &2830947601404457841
 GameObject:
   m_ObjectHideFlags: 0
