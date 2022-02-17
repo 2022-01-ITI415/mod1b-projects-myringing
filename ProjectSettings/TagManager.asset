@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Apple
+  - Boom
+  - Projectile
+  - Tower
+  - Wall
+  - RedWall
+  - PickUp
+  - Enemy
+  - Cannon
+  - Treasure
+  - Boss
+  - EnemyCan
   layers:
   - Default
   - TransparentFX
@@ -13,15 +25,15 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - AppleTree
+  - Apple
+  - Basket
+  - Background
+  - PlayerCannon
+  - EnemyCannon
+  - Player
+  - Enemy
+  - Wall
   - 
   - 
   - 
